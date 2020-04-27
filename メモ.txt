@@ -1,0 +1,5 @@
+﻿icon:http://findicons.com/icon/34085/cinema_display
+
+とりあえず完成：2011/01/02
+
+登校日以降に配布してフィードバックを集めてみる。

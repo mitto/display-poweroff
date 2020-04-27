@@ -5,14 +5,31 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{952B90D0-A554-4877-BB2A-8F6BAC9E1A64}</ProjectGuid>
+    <ProjectGuid>{BC4FDEFF-4CC1-4D36-A11D-7528A66031C5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DisplayPowerOff</RootNamespace>
+    <RootNamespace>mitto.DisplayPowerOff</RootNamespace>
     <AssemblyName>DisplayPowerOff</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.mittostar.info/</SupportUrl>
+    <ProductName>PowerSwitcher</ProductName>
+    <PublisherName>mitto</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -20,7 +37,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -34,10 +51,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DisplayPowerOff.Program</StartupObject>
+    <ApplicationIcon>cinema_display2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -52,6 +68,18 @@
     <Compile Include="dlgCountDown.Designer.cs">
       <DependentUpon>dlgCountDown.cs</DependentUpon>
     </Compile>
+    <Compile Include="dlgHotKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgHotKey.Designer.cs">
+      <DependentUpon>dlgHotKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgHotKeySetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgHotKeySetting.Designer.cs">
+      <DependentUpon>dlgHotKeySetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="dlgSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +92,30 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="HotKey.cs" />
+    <Compile Include="Properties\HotKey.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>HotKey.settings</DependentUpon>
+    </Compile>
     <Compile Include="PowerControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Main.cs" />
+    <Compile Include="Properties\Main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Main.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="dlgCountDown.resx">
       <DependentUpon>dlgCountDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgHotKey.resx">
+      <DependentUpon>dlgHotKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgHotKeySetting.resx">
+      <DependentUpon>dlgHotKeySetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dlgSetting.resx">
       <DependentUpon>dlgSetting.cs</DependentUpon>
@@ -88,16 +134,41 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="Properties\Settings.settings">
+    <None Include="Properties\HotKey.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <LastGenOutput>HotKey.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+    <None Include="Properties\Main.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Main.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Release\DisplayPowerOff\Readme.txt" />
+    <Content Include="cinema_display.ico" />
+    <None Include="cinema_display2.ico" />
+    <Content Include="Readme.txt" />
+    <Content Include="メモ.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
