@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DisplayPowerOff.frmMain">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="DisplayPowerOff.frmMain.ForceRunAlert" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>frmMain.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAADAkAACQSAABEABDAAAACAAAAACAEAEgAgCAABAA=</HashCode>
+      <FileName>frmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisplayPowerOff.dlgCountDown">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAEAEAAACAAECCAAAIAEAAAAAAAAAAAEE=</HashCode>
+      <FileName>dlgCountDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisplayPowerOff.dlgSetting">
+    <Position X="6.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAISAAAAEAAECAgMCCCAAQAEACAAAAAAAAAgA=</HashCode>
+      <FileName>dlgSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisplayPowerOff.Properties.Settings">
+    <Position X="10.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAIAEAAAABAAAAAAAAAAAAaAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisplayPowerOff.PowerControl">
+    <Position X="13.5" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="DisplayPowerOff.PowerControl.DisplayPowerState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PowerControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAACAAAAIAAABAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>PowerControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>
